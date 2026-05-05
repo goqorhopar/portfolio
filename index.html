@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио — Разработчик</title>
+  <title>Григорий Манукян — Fullstack-разработчик</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43,17 +43,12 @@
     }
 
     .hero-avatar {
-      width: 120px;
-      height: 120px;
+      width: 128px;
+      height: 128px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+      object-fit: cover;
       margin: 0 auto 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      color: #fff;
-      font-weight: 700;
+      display: block;
       box-shadow: 0 0 40px rgba(129, 140, 248, 0.3);
     }
 
@@ -61,19 +56,49 @@
       font-size: 2.5rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
+    }
+
+    .hero .subtitle {
+      font-size: 1.125rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 16px;
     }
 
     .hero p {
-      font-size: 1.125rem;
+      font-size: 1rem;
       color: var(--text-secondary);
-      max-width: 560px;
+      max-width: 640px;
       margin: 0 auto 32px;
+    }
+
+    .hero-contact {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .hero-contact a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .hero-contact a:hover {
+      color: var(--accent);
     }
 
     .hero-links {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -118,9 +143,9 @@
     /* Stats */
     .stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-bottom: 60px;
+      margin-bottom: 20px;
     }
 
     .stat-card {
@@ -141,6 +166,46 @@
       font-size: 0.85rem;
       color: var(--text-secondary);
       margin-top: 4px;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .about-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .about-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-card li {
+      padding: 6px 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 8px;
+    }
+
+    .about-card li::before {
+      content: "→";
+      color: var(--accent);
     }
 
     /* Projects */
@@ -220,6 +285,58 @@
       color: var(--accent);
     }
 
+    /* Experience */
+    .exp-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    .exp-item .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .exp-item .exp-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .exp-item .exp-company {
+      color: var(--accent);
+    }
+
+    .exp-item .exp-date {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .exp-item ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-item li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .exp-item li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
     /* Skills */
     .skills-list {
       display: flex;
@@ -236,7 +353,34 @@
       color: var(--text);
     }
 
-    /* Contact / Footer */
+    /* Languages */
+    .lang-list {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .lang-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      text-align: center;
+      flex: 1;
+      min-width: 120px;
+    }
+
+    .lang-item .lang-name {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .lang-item .lang-level {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* Footer */
     .footer {
       text-align: center;
       padding: 40px 0 60px;
@@ -249,10 +393,11 @@
       font-size: 0.85rem;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .hero h1 { font-size: 1.8rem; }
-      .projects-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -262,17 +407,23 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-avatar">👤</div>
-    <h1>Привет, я разработчик</h1>
-    <p>Создаю AI-решения для автоматизации продаж, аналитики звонков и веб-сервисы. Мои проекты помогают бизнесу продавать эффективнее.</p>
+    <img src="profile.jpg" alt="Григорий Манукян" class="hero-avatar">
+    <h1>Григорий Манукян</h1>
+    <div class="subtitle">Fullstack-разработчик · Backend · Node.js · Python · AI</div>
+    <div class="hero-contact">
+      <a href="tel:+79917833778">📞 +7 (991) 783-37-78</a>
+      <a href="mailto:grigormanukyan26@mail.ru">✉️ grigormanukyan26@mail.ru</a>
+      <span>📍 Москва</span>
+    </div>
+    <p>Fullstack-разработчик с 8+ летним опытом. Специализируюсь на backend-разработке (Node.js, Python/FastAPI), архитектуре SaaS-продуктов и интеграции AI/LLM в бизнес-процессы. Строю процессы от MVP до production — с CI/CD, мониторингом и SLA 99.9%.</p>
     <div class="hero-links">
       <a href="https://github.com/goqorhopar" target="_blank">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
         GitHub
       </a>
-      <a href="mailto:contact@example.com">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Связаться
+      <a href="https://github.com/goqorhopar/portfolio/raw/main/Манукян_Григорий_Резюме.pdf" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Резюме
       </a>
     </div>
   </section>
@@ -280,22 +431,96 @@
   <!-- Stats -->
   <div class="stats">
     <div class="stat-card">
+      <div class="number">8+</div>
+      <div class="label">Лет опыта</div>
+    </div>
+    <div class="stat-card">
       <div class="number">10</div>
       <div class="label">Проектов</div>
     </div>
     <div class="stat-card">
-      <div class="number">8</div>
-      <div class="label">На GitHub</div>
+      <div class="number">4</div>
+      <div class="label">Компании</div>
     </div>
     <div class="stat-card">
-      <div class="number">AI</div>
-      <div class="label">Основной стек</div>
-    </div>
-    <div class="stat-card">
-      <div class="number">2</div>
-      <div class="label">Года в разработке</div>
+      <div class="number">200K</div>
+      <div class="label">Ожидания</div>
     </div>
   </div>
+
+  <!-- About -->
+  <section class="section">
+    <h2 class="section-title">О себе</h2>
+    <p class="section-subtitle">Ключевые результаты и компетенции</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>🏆 Ключевые достижения</h3>
+        <ul>
+          <li>Сократил CAC на 40% через AI-решения</li>
+          <li>Увеличил обработку лидов на 70%</li>
+          <li>Автоматизировал 60% ручных процессов</li>
+          <li>Ускорил обработку заявок на 50%</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>🎯 Специализация</h3>
+        <ul>
+          <li>Backend: Node.js (Express/Fastify), Python (FastAPI/Flask)</li>
+          <li>AI/LLM: LangChain, RAG, Whisper, GPT, Gemini, Mistral</li>
+          <li>Архитектура SaaS-продуктов с нуля</li>
+          <li>CI/CD: GitHub Actions, Docker, Linux (Ubuntu)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section">
+    <h2 class="section-title">Опыт работы</h2>
+    <p class="section-subtitle">8+ лет в разработке</p>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Senior AI-разработчик / Team Lead</span>
+        <span class="exp-date">Фев 2024 — настоящее время · 1 г 4 мес</span>
+      </div>
+      <div class="exp-company">IT-компания (продуктовая разработка)</div>
+      <ul>
+        <li>Спроектировал и внедрил AI-пайплайн для обработки звонков (Python, FastAPI, LLM API): автоматизация 60% ручных процессов, снижение CAC на 40%, рост обработки лидов на 70%</li>
+        <li>Интегрировал CRM с Telegram Bot API и Email (SMTP/IMAP): автоматизация 40% коммуникаций, ускорение обработки заявок на 50%</li>
+        <li>Спроектировал и запустил LMS-платформу для обучения (Node.js, React, PostgreSQL): с 2 пользователей до 2000 за 2 месяца</li>
+        <li>Управлял распределённой командой до 4 разработчиков; доля проектов ~55% от выручки 2025 года при штате 30+ человек</li>
+        <li>Внедрил CI/CD (GitHub Actions, Docker), мониторинг и SLA 99.9%</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Backend-разработчик</span>
+        <span class="exp-date">Июн 2019 — Авг 2023 · 4 г 4 мес</span>
+      </div>
+      <div class="exp-company">Юридическая компания «Law Business Group»</div>
+      <ul>
+        <li>Разработал и внедрил систему электронного документооборота для юридического отдела (Node.js, Express, PostgreSQL): ускорение обработки документов на 30%</li>
+        <li>Интегрировал внешние сервисы (CRM/ERP): сократил время интеграции новых сервисов на 40%</li>
+        <li>Внедрил Agile-процессы (Scrum, ретроспективы) для команды 8 человек; производительность выросла на 25%</li>
+        <li>Администрировал серверы на Linux (Ubuntu, Nginx, PM2), оптимизировал PostgreSQL-запросы</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Fullstack-разработчик / Технический директор</span>
+        <span class="exp-date">Июл 2015 — Авг 2023 · 8 лет</span>
+      </div>
+      <div class="exp-company">Собственный бизнес (интернет-магазин)</div>
+      <ul>
+        <li>Спроектировал и построил интернет-магазин с нуля (JavaScript, Node.js, MySQL): полный цикл — от архитектуры до развёртывания</li>
+        <li>Интегрировал платёжные API (ЮKassa, эквайринг), службы доставки (через API) и CRM через REST/Webhook</li>
+        <li>Настроил Linux-инфраструктуру (Ubuntu) с нуля; сократил время развёртывания новых сервисов на 35%</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Projects -->
   <section class="section">
@@ -374,9 +599,9 @@
         <p>Многофункциональный бот: запись встреч, транскрипция, анализ через Gemini AI, интеграция с Bitrix24 для обновления лидов.</p>
         <div class="tags">
           <span class="tag">JavaScript</span>
-          <span class="tag">Node.js</span>
           <span class="tag">Telegram</span>
           <span class="tag">Gemini</span>
+          <span class="tag">Bitrix24</span>
         </div>
         <div class="links">
           <a href="https://github.com/goqorhopar/-" target="_blank">GitHub →</a>
@@ -403,7 +628,7 @@
       <div class="project-card">
         <div class="icon">💬</div>
         <h3>AI Widget</h3>
-        <p>Интерактивный чат-виджет с AI-агентом. Скрипт продаж, голосовое взаимодействие, Telegram-уведомления. Компактная версия.</p>
+        <p>Интерактивный чат-виджет с AI-агентом. Скрипт продаж, голосовое взаимодействие, Telegram-уведомления. Компактная версия виджета.</p>
         <div class="tags">
           <span class="tag">GPT-5</span>
           <span class="tag">Node.js</span>
@@ -469,27 +694,66 @@
   <!-- Skills -->
   <section class="section">
     <h2 class="section-title">Технологии</h2>
-    <p class="section-subtitle">С чем работаю</p>
+    <p class="section-subtitle">Мой стек</p>
     <div class="skills-list">
-      <span class="skill-chip">Python</span>
-      <span class="skill-chip">Node.js</span>
-      <span class="skill-chip">FastAPI</span>
-      <span class="skill-chip">Flask</span>
-      <span class="skill-chip">Express</span>
-      <span class="skill-chip">Selenium</span>
-      <span class="skill-chip">Puppeteer</span>
-      <span class="skill-chip">Whisper AI</span>
-      <span class="skill-chip">Gemini AI</span>
-      <span class="skill-chip">GPT-5 / OpenAI</span>
-      <span class="skill-chip">Mistral API</span>
-      <span class="skill-chip">LangChain</span>
-      <span class="skill-chip">MongoDB</span>
-      <span class="skill-chip">PostgreSQL</span>
+      <span class="skill-chip">Node.js (Express, Fastify)</span>
+      <span class="skill-chip">Python (FastAPI, Flask)</span>
       <span class="skill-chip">React</span>
+      <span class="skill-chip">TypeScript</span>
+      <span class="skill-chip">PostgreSQL</span>
+      <span class="skill-chip">MySQL</span>
+      <span class="skill-chip">MongoDB</span>
+      <span class="skill-chip">Redis</span>
+      <span class="skill-chip">Qdrant</span>
+      <span class="skill-chip">Mistral API</span>
+      <span class="skill-chip">Gemini API</span>
+      <span class="skill-chip">OpenAI / Whisper</span>
+      <span class="skill-chip">LangChain</span>
+      <span class="skill-chip">RAG</span>
       <span class="skill-chip">Docker</span>
+      <span class="skill-chip">GitHub Actions</span>
+      <span class="skill-chip">Linux (Ubuntu)</span>
+      <span class="skill-chip">Nginx</span>
+      <span class="skill-chip">PM2</span>
       <span class="skill-chip">Telegram Bot API</span>
-      <span class="skill-chip">Bitrix24 API</span>
-      <span class="skill-chip">HTML / CSS / JS</span>
+      <span class="skill-chip">REST / GraphQL</span>
+      <span class="skill-chip">Agile / Scrum</span>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section class="section">
+    <h2 class="section-title">Языки</h2>
+    <p class="section-subtitle">Уровень владения</p>
+    <div class="lang-list">
+      <div class="lang-item">
+        <div class="lang-name">🇷🇺 Русский</div>
+        <div class="lang-level">Родной</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">🇬🇧 Английский</div>
+        <div class="lang-level">C2 (Свободное владение)</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">🇦🇲 Армянский</div>
+        <div class="lang-level">B1 (Средний)</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">🇫🇷 Французский</div>
+        <div class="lang-level">B1 (Средний)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <h2 class="section-title">Образование</h2>
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Московский государственный университет</span>
+        <span class="exp-date">2013</span>
+      </div>
+      <div class="exp-company">Факультет: Прикладная математика</div>
     </div>
   </section>
 
@@ -498,7 +762,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 · Портфолио на <a href="https://github.com/goqorhopar" style="color: var(--accent);">GitHub</a></p>
+      <p>© 2026 · Григорий Манукян · <a href="https://github.com/goqorhopar" style="color: var(--accent);">GitHub</a></p>
     </div>
   </footer>
 
