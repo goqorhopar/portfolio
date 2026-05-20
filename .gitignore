@@ -1,4 +1,1 @@
-Since the only files added are `.gitignore` and `README.md` (both of which are standard repository files that should not be ignored), and there are no build artifacts, dependency directories, or other files that need to be ignored, the optimized .gitignore content is empty.
-
-```(empty)
-```
+(index.html is a source file, so no need to add anything to .gitignore)
